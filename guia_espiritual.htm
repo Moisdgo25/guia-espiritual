@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guia Espiritual – Jornada de Autoconhecimento</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  header {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(18,18,18,0.6);
+    z-index: 0;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    z-index: 1;
+    color: #b8a0f7;
+    max-width: 900px;
+  }
+
+  header p {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    color: #d1c4e9;
+    z-index: 1;
+    max-width: 700px;
+  }
+
+  main {
+    flex: 1;
+    max-width: 900px;
+    margin: -80px auto 60px;
+    background: #1e1e1e;
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  }
+
+  section {
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #b8a0f7;
+    border-bottom: 3px solid #7e57c2;
+    padding-bottom: 10px;
+  }
+
+  p, ul li {
+    font-size: 1.15rem;
+    color: #ccc;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+    font-weight: 600;
+    color: #d1c4e9;
+  }
+
+  ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    font-size: 1.3rem;
+    color: #8e7be0;
+  }
+
+  img.ilustracao {
+    display: block;
+    max-width: 150px;
+    margin: 20px auto 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(138, 109, 217, 0.4);
+  }
+
+  .botao-comprar {
+    display: inline-block;
+    background: #8e7be0;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 16px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(142, 123, 224, 0.7);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    user-select: none;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .botao-comprar:hover {
+    background: #7a67c7;
+  }
+
+  .botao-centro {
+    display: flex;
+    justify-content: center;
+  }
+
+  .seguranca {
+    background: #292929;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(142, 123, 224, 0.4);
+    color: #b8a0f7;
+    text-align: center;
+  }
+
+  .seguranca h3 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+  }
+
+  .seguranca p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .selos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+  }
+
+  .selo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 110px;
+    color: #d1c4e9;
+  }
+
+  .selo img {
+    width: 70px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 3px #8e7be0);
+  }
+
+  footer {
+    text-align: center;
+    padding: 25px 15px;
+    background: #1b1b1b;
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 1px;
+    user-select: none;
+  }
+
+  @media (max-width: 768px) {
+    header {
+      height: 280px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      max-width: 90%;
+    }
+
+    header p {
+      font-size: 1rem;
+      max-width: 90%;
+    }
+
+    main {
+      margin: -50px 15px 40px;
+      padding: 30px 20px 40px;
+      max-width: 95%;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    p, ul li {
+      font-size: 1rem;
+    }
+
+    .selos {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Guia Espiritual – Jornada de Autoconhecimento e Conexão Interior</h1>
+    <p>Desperte seu poder interior, alcance paz e transforme sua vida com práticas simples e eficazes.</p>
+  </header>
+
+  <main>
+    <section>
+      <img class="ilustracao" src="https://cdn-icons-png.flaticon.com/512/2606/2606874.png" alt="Meditação" />
+      <h2>Transforme sua vida agora</h2>
+      <p>Este guia exclusivo vai ajudar você a despertar seu potencial interior e viver com mais equilíbrio e propósito. Práticas de meditação, exercícios e afirmações para o seu dia a dia.</p>
+      <div class="botao-centro">
+        <a href="https://pay.cakto.com.br/36yeqfm_518998" target="_blank" rel="noopener" class="botao-comprar">Comprar Agora por R$ 49,90</a>
+      </div>
+    </section>
+
+    <section>
+      <img class="ilustracao" src="https://cdn-icons-png.flaticon.com/512/1966/1966751.png" alt="Conteúdo do Guia" />
+      <h2>O que você vai encontrar</h2>
+      <ul>
+        <li>Práticas para acalmar a mente e elevar sua energia</li>
+        <li>Meditações guiadas para conexão profunda</li>
+        <li>Afirmações poderosas para autoestima</li>
+        <li>Exercícios de autoconhecimento</li>
+        <li>Dicas para cultivar paz e harmonia</li>
+      </ul>
+      <div class="botao-centro">
+        <a href="https://pay.cakto.com.br/36yeqfm_518998" target="_blank" rel="noopener" class="botao-comprar">Quero meu Guia Agora</a>
+      </div>
+    </section>
+
+    <section>
+      <img class="ilustracao" src="https://cdn-icons-png.flaticon.com/512/3784/3784184.png" alt="Por que comprar" />
+      <h2>Por que comprar o Guia Espiritual?</h2>
+      <ul>
+        <li>Reduza o estresse e alcance mais equilíbrio emocional</li>
+        <li>Aprenda técnicas simples para melhorar seu foco e energia</li>
+        <li>Desenvolva autoconfiança com afirmações e exercícios práticos</li>
+        <li>Invista no seu bem-estar e transforme sua rotina</li>
+        <li>Conteúdo acessível e fácil de aplicar no dia a dia</li>
+      </ul>
+      <div class="botao-centro">
+        <a href="https://pay.cakto.com.br/36yeqfm_518998" target="_blank" rel="noopener" class="botao-comprar">Garanta seu Guia Hoje</a>
+      </div>
+    </section>
+
+    <section class="seguranca">
+      <h3>Compra 100% segura e garantida</h3>
+      <p>Utilizamos as melhores plataformas de pagamento, garantindo total proteção e sigilo dos seus dados pessoais.</p>
+      <p>Entrega imediata após a confirmação do pagamento e suporte dedicado para tirar suas dúvidas.</p>
+      <p>Garantia de satisfação: se não gostar, devolvemos seu dinheiro em até 7 dias.</p>
+      <div class="selos">
+        <div class="selo">
+          <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Selo Segurança" />
+          <span>Pagamento Seguro</span>
+        </div>
+        <div class="selo">
+          <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Garantia" />
+          <span>Garantia 7 Dias</span>
+        </div>
+        <div class="selo">
+          <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Suporte" />
+          <span>Suporte Dedicado</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Guia Espiritual – Todos os direitos reservados
+  </footer>
+</body>
+</html>
